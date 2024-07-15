@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/iv_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_assignment_24"
+        android:contentDescription="@string/menu_history" />
+
+    <TextView
+        android:id="@+id/tv_total_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_id_payment"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/iv_payment"
+        app:layout_constraintTop_toTopOf="@+id/iv_payment"
+        tools:text="@string/rp_30_000" />
+
+    <TextView
+        android:id="@+id/tv_id_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="#0-001" />
+
+    <TextView
+        android:id="@+id/tv_time_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_payment"
+        app:layout_constraintEnd_toEndOf="@+id/tv_total_payment"
+        app:layout_constraintStart_toStartOf="@+id/tv_total_payment"
+        tools:text="14:20" />
+
+    <TextView
+        android:id="@+id/tv_status_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_time_payment"
+        app:layout_constraintEnd_toEndOf="@+id/tv_id_payment"
+        app:layout_constraintTop_toTopOf="@+id/tv_time_payment"
+        tools:text="Success" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_uang_diterima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uang_diterima"
+        android:textColor="@color/bg_login"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_pembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_uang_diterima">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_uang_pas"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:checked="true"
+            android:drawableStart="@drawable/round_money_24"
+            android:drawablePadding="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/uang_pas"
+            android:theme="@style/MyRadioButton" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_input_uang"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/round_money_24"
+            android:drawablePadding="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/uang_lebih"
+            android:theme="@style/MyRadioButton" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_card"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_round_credit_card_24"
+            android:drawablePadding="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/card"
+            android:theme="@style/MyRadioButton" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_round_account_balance_wallet_24"
+            android:drawablePadding="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/e_wallet"
+            android:theme="@style/MyRadioButton" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txt_masukan_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/rg_pembayaran"
+        app:layout_constraintStart_toStartOf="@+id/rg_pembayaran"
+        app:layout_constraintTop_toBottomOf="@+id/rg_pembayaran" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_number"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:backgroundTint="@color/login_btn"
+        android:imeOptions="actionDone"
+        android:gravity="end"
+        android:inputType="number"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_masukan_jumlah"
+        app:layout_constraintStart_toEndOf="@+id/txt_masukan_jumlah"
+        app:layout_constraintTop_toBottomOf="@+id/rg_pembayaran" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

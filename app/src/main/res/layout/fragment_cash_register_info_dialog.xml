@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sales.CashRegisterInfoDialogFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_cash_register_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/cash_info"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_cash_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/cash_register"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cash_register_info" />
+
+        <TextView
+            android:id="@+id/txt_cash_register_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cash_register"
+            tools:text="@string/rp_30_000" />
+
+        <TextView
+            android:id="@+id/txt_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/cash"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cash_register_amount" />
+
+        <TextView
+            android:id="@+id/txt_cash_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cash"
+            tools:text="@string/rp_30_000" />
+
+        <TextView
+            android:id="@+id/txt_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/card"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txt_cash_register_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_cash_amount" />
+
+        <TextView
+            android:id="@+id/txt_card_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_card"
+            app:layout_constraintStart_toStartOf="@+id/txt_card"
+            app:layout_constraintTop_toBottomOf="@+id/txt_card"
+            tools:text="@string/rp_30_000" />
+
+        <TextView
+            android:id="@+id/txt_e_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/e_wallet"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_cash_register_info"
+            app:layout_constraintTop_toTopOf="@+id/txt_card" />
+
+        <TextView
+            android:id="@+id/txt_e_wallet_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_e_wallet"
+            app:layout_constraintStart_toStartOf="@+id/txt_e_wallet"
+            app:layout_constraintTop_toBottomOf="@+id/txt_e_wallet"
+            tools:text="@string/rp_30_000" />
+
+        <TextView
+            android:id="@+id/txt_total_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/total_payment"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txt_cash_register_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_e_wallet_amount" />
+
+        <TextView
+            android:id="@+id/txt_total_payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_total_payment"
+            app:layout_constraintStart_toStartOf="@+id/txt_total_payment"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_payment"
+            tools:text="@string/rp_30_000" />
+
+        <TextView
+            android:id="@+id/txt_total_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_cash"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_total_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_cash_register_info"
+            app:layout_constraintTop_toTopOf="@+id/txt_total_payment" />
+
+        <TextView
+            android:id="@+id/txt_total_cash_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_total_cash"
+            app:layout_constraintStart_toStartOf="@+id/txt_total_cash"
+            app:layout_constraintTop_toBottomOf="@+id/txt_total_cash"
+            tools:text="@string/rp_30_000" />
+
+        <include
+            android:id="@+id/loading_state"
+            layout="@layout/item_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

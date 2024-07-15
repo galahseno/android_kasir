@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/nav_sales">
+
+    <fragment
+        android:id="@+id/nav_sales"
+        android:name="id.dev.oxy.ui.sales.SalesFragment"
+        android:label="@string/menu_sales"
+        tools:layout="@layout/fragment_sales" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="id.dev.oxy.ui.history.HistoryContainerFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history_container" />
+
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="id.dev.oxy.ui.customer.CustomerContainerFragment"
+        android:label="@string/menu_customer"
+        tools:layout="@layout/fragment_customer_container" />
+
+    <fragment
+        android:id="@+id/nav_draft"
+        android:name="id.dev.oxy.ui.draft.DraftContainerFragment"
+        android:label="@string/menu_draft"
+        tools:layout="@layout/fragment_draft_container" />
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="id.dev.oxy.ui.sales.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+</navigation>

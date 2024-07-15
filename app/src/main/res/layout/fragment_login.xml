@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.auth.login.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_login"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/login_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/app_logo"
+            android:background="@color/bg_login_secondary"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/username"
+            android:textColor="@color/login_text"
+            app:layout_constraintEnd_toEndOf="@+id/img_logo"
+            app:layout_constraintHorizontal_bias="0.40"
+            app:layout_constraintStart_toStartOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_username"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:hint="@string/username_hint"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/cursor_color"
+            app:layout_constraintEnd_toEndOf="@+id/img_logo"
+            app:layout_constraintStart_toStartOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+        <TextView
+            android:id="@+id/txt_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/pin"
+            android:textColor="@color/login_text"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/img_logo"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/edt_username" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_pin"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:hint="@string/pin_hint"
+            android:inputType="numberPassword"
+            android:imeOptions="actionDone"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/cursor_color"
+            app:layout_constraintEnd_toEndOf="@+id/img_logo"
+            app:layout_constraintStart_toStartOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/txt_pin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_masuk"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/login_btn"
+            android:text="@string/masuk"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/edt_pin"
+            app:layout_constraintStart_toStartOf="@+id/edt_pin"
+            app:layout_constraintTop_toBottomOf="@+id/edt_pin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
